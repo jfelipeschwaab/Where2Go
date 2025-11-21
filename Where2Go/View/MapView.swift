@@ -76,9 +76,9 @@ struct MapView: View {
         Place(name: "Park Shopping", coordinate: CLLocationCoordinate2D(latitude: -15.833240673323662, longitude: -47.95493337301267))
     ]
     @State private var region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: -18.15, longitude: -47.6),
-            span: MKCoordinateSpan(latitudeDelta: 5.5, longitudeDelta: 5.5)
-        )
+        center: CLLocationCoordinate2D(latitude: -15.839, longitude: -47.976), // Foco em Brasília
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1) // Zoom maior
+    )
         
         // MARK: - Estados para os Filtros (Valores Atuais)
         @State private var selectedType: String = "Date"
