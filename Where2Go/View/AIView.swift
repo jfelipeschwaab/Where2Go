@@ -21,7 +21,7 @@ struct EncontroView: View {
                         .padding(.vertical)
                     Spacer()
                 }
-                .background(Color(red: 0.5, green: 0.05, blue: 0.2))
+                .background(Color.vermelho)
                 
                 ScrollViewReader { reader in
                     ScrollView {
