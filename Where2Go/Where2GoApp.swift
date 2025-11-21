@@ -11,7 +11,7 @@ import SwiftUI
 struct Where2GoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EncontroView()
         }
     }
 }
