@@ -50,7 +50,7 @@ struct FilterMenu: View {
                 Text(title)
                     .font(.caption)
                 Text(selectedValue)
-                    .font(.caption)
+                    .font(.footnote)
                     .fontWeight(.bold)
                 Image(systemName: "chevron.down")
                     .font(.caption)
@@ -113,52 +113,40 @@ struct MapView: View {
             VStack{
                 Rectangle()
                     .fill(primaryColor)
-                    .frame(height: 100)
-                
-                // Área para os filtros
-                HStack(spacing: 8) {
+                    .frame(height: 150)
+                    .edgesIgnoringSafeArea(.all)
+                //filtro
+                HStack(spacing: 2) {
                     Spacer()
-                    
                     FilterMenu(
                         title: "Tipo",
                         selectedValue: $selectedType,
                         options: typeOptions,
                         primaryColor: primaryColor
                     )
-                    
                     FilterMenu(
                         title: "Estilo",
                         selectedValue: $selectedStyle,
                         options: styleOptions,
                         primaryColor: primaryColor
                     )
-                    
                     FilterMenu(
                         title: "Distância",
                         selectedValue: $selectedDistance,
                         options: distanceOptions,
                         primaryColor: primaryColor
                     )
-                    
-                    // Ícone de filtro avançado
-                    Image(systemName: "slider.horizontal.3")
-                        .font(.title2)
-                        .padding(8)
-                        .background(Color.white.opacity(0.8))
-                        .foregroundColor(primaryColor)
-                        .cornerRadius(10)
                     Spacer()
                 }
                 .padding(.vertical, 8)
                 .background(Color.white.opacity(0.95))
                 .cornerRadius(15)
                 .padding(.horizontal, 10)
-                .offset(y: -20)
+                .offset(y: -68)
                 .shadow(radius: 3)
                 
                 Spacer()
             }
-            
             // 3.3. Títulos e Navegação (sobrepondo o retângulo de fundo)
             VStack {
                 // Título e botão "Voltar"
